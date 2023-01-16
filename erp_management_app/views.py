@@ -95,9 +95,9 @@ class forgot_password(APIView):
 
  # send otp               #send_mail('OTP for reset password',f'your otp is {otp.at(user.otp_counter)}', settings.EMAIL_HOST_USER, [email], fail_silently=False)
 
-                return Response(message={'message': 'otp has been sent to your email'}, status=status.HTTP_200_OK)
+                return JsonResponse(message={'message': 'otp has been sent to your email'}, status=status.HTTP_200_OK)
 
-            except ObjectDoesNotExist:
+            except :
                 return JsonResponse(data={"message": "This email is not found in our data"}, status=status.HTTP_404_NOT_FOUND)
 
         except:

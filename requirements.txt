@@ -1,0 +1,4 @@
+Django==4.1.5
+djangorestframework==3.14.0
+environ==1.0
+pyotp==2.8.0
